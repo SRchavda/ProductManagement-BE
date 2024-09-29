@@ -1,4 +1,5 @@
 ﻿using CrudWithMongoDB.Model;
+using MongoDB.Bson;
 using MongoDB.Driver;
 
 namespace CrudWithMongoDB.Service
@@ -12,6 +13,20 @@ namespace CrudWithMongoDB.Service
         {
             _collection = collection;
             _orderService = orderService;
+        }
+
+        public async override Task<List<Stocks>> GetAsync()
+        {
+            var stocks = await base.GetAsync();
+            foreach (var stock in stocks)
+            {
+                if (!string.IsNullOrEmpty(stock.Id))
+                {
+                    var oQty = await _orderService.GetOrderByStockId(stock.Id);
+                    stock.OrderQuantity = oQty == null ? 0 : oQty.OrderQuantity;
+                }
+            }
+            return stocks;
         }
 
         public override async Task<string> CreateAsync(Stocks newItem)
