@@ -92,3 +92,4 @@ C:\Users\Lenovo\Desktop\Shivraj - Work\ProductManagement\BE\obj\Debug\net6.0\ref
 C:\Users\Lenovo\Desktop\Shivraj - Work\ProductManagement\BE\obj\Debug\net6.0\CrudWithMongoDB.pdb
 C:\Users\Lenovo\Desktop\Shivraj - Work\ProductManagement\BE\obj\Debug\net6.0\CrudWithMongoDB.genruntimeconfig.cache
 C:\Users\Lenovo\Desktop\Shivraj - Work\ProductManagement\BE\obj\Debug\net6.0\ref\CrudWithMongoDB.dll
+C:\Users\Dell\Desktop\CrudWithMongoDB\obj\Debug\net6.0\CrudWithMongoDB.sourcelink.json
